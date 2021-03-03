@@ -10,7 +10,7 @@ workflow IndexMaintenence
         [parameter(Mandatory=$True)]
         [string] $Database
     )
-	
+	#add some change
     #Get user name for database 
     $UserNameForEnv = Get-AutomationVariable -Name SqlServerCredential
     $SqlServer = Get-AutomationVariable -Name DbServer
