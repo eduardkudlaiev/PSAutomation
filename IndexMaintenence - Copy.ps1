@@ -1,7 +1,7 @@
-workflow IndexMaintenence
+workflow IndexMaintenence2
 {
 
-    function Execute-Index-Maintenance
+    function Execute-Index-Maintenance2
 {
 	param(
         [parameter(Mandatory=$False)]
@@ -62,10 +62,10 @@ workflow IndexMaintenence
     #Start execution in parallel
     Parallel
     {    
-        Execute-Index-Maintenance -Database $scrub
-        Execute-Index-Maintenance -Database $scrub_crm
-        Execute-Index-Maintenance -Database $scrub_identity
-        Execute-Index-Maintenance -Database $scrub_scraping
+        Execute-Index-Maintenance2 -Database $scrub
+        Execute-Index-Maintenance2 -Database $scrub_crm
+        Execute-Index-Maintenance2 -Database $scrub_identity
+        Execute-Index-Maintenance2 -Database $scrub_scraping
     }
 
     Write-Output "Maintenance done."
